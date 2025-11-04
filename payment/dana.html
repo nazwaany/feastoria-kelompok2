@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bank Transfer - BCA</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        margin: 0;
+        background-color: #fff;
+        color: #222;
+      }
+
+      /* ===== NAVBAR ===== */
+      .navbar {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 15px 5%;
+        background-color: white;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      }
+
+      .navbar img {
+        width: 28px;
+        cursor: pointer;
+      }
+
+      /* ===== HEADER ===== */
+      .header {
+        margin-top: 60px;
+        padding: 30px 20px;
+        text-align: center;
+        background: linear-gradient(to top, #fff0f0, #f1a9a9);
+        border-radius: 0 0 12px 12px;
+      }
+
+      .header h3 {
+        font-size: 18px;
+        margin-bottom: 25px;
+      }
+
+      /* ===== BANK CARD ===== */
+      .bank-card {
+        background-color: #fff;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        padding: 25px 20px;
+        text-align: center;
+        width: 80%;
+        margin: 0 auto;
+      }
+
+      .bank-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+
+      .bank-top span {
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      .bank-top a {
+        font-size: 13px;
+        color: #888;
+        text-decoration: none;
+      }
+
+      .bank-logo img {
+        width: 90px;
+        height: auto;
+      }
+
+      .bank-logo p {
+        margin-top: 6px;
+        font-size: 13px;
+        color: #555;
+      }
+
+      .va-number {
+        background-color: #fff0f0;
+        border-radius: 8px;
+        padding: 10px;
+        margin-top: 10px;
+        font-size: 14px;
+        font-weight: 600;
+        color: #d33;
+        display: inline-block;
+        letter-spacing: 1px;
+      }
+
+      .copy-btn {
+        margin-left: 8px;
+        font-size: 12px;
+        padding: 5px 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background: #fff;
+        cursor: pointer;
+      }
+
+      /* ===== INFORMASI ===== */
+      .info-section {
+        padding: 25px 8%;
+      }
+
+      .info-title {
+        font-weight: 600;
+        margin-bottom: 10px;
+        font-size: 14px;
+      }
+
+      .info-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 8px;
+        font-size: 14px;
+      }
+
+      /* ===== INSTRUKSI ===== */
+      .instruksi-title {
+        margin-top: 30px;
+        font-weight: 600;
+        font-size: 14px;
+      }
+
+      details {
+        border-bottom: 1px solid #ddd;
+        padding: 12px 0;
+      }
+
+      summary {
+        font-weight: 500;
+        font-size: 14px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      details p {
+        margin: 10px 0 0 10px;
+        font-size: 13px;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <a href="jenis-bank.html">
+        <img src="../gambar/back.jpg" alt="Kembali" />
+      </a>
+    </nav>
+
+    <!-- Header -->
+    <div class="header">
+      <h3>Bank TransferS</h3>
+      <div class="bank-card">
+        <div class="bank-top">
+          <span>BANK</span>
+          <a href="jenis-bank.html">Change ></a>
+        </div>
+        <div class="bank-logo">
+          <img src="../gambar/dana.jpg" alt="BCA" />
+          <p>Virtual Account Number</p>
+          <div>
+            <span class="va-number">1234 207 1002 2917</span>
+            <button class="copy-btn">COPY</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Informasi -->
+    <div class="info-section">
+      <div class="info-title">INFORMATION</div>
+      <div class="info-row">
+        <span>Account Name </span>
+        <span>Saskia Khalisah</span>
+      </div>
+      <div class="info-row">
+        <span>Total Pembayaran</span>
+        <span id="payment-amount">Rp 0</span>
+      </div>
+
+      <div class="instruksi-title">INSTRUCTIONS</div>
+
+      <details>
+        <summary>Digital wallet</summary>
+      </details>
+      <details>
+        <summary>Transaction Id</summary>
+      </details>
+      <details></details>
+      <details>
+        <summary>Term & Conditions</summary>
+      </details>
+    </div>
+  </body>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const paymentAmountElement = document.getElementById('payment-amount');
+      const totalPayment = sessionStorage.getItem('totalPayment');
+      if (paymentAmountElement && totalPayment) {
+        paymentAmountElement.textContent = 'Rp' + parseFloat(totalPayment).toLocaleString('id-ID');
+      }
+    });
+  </script>
+</html>

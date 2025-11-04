@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Top Up DP</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        margin: 0;
+        background-color: #fff;
+        color: #222;
+      }
+
+      /* ===== NAVBAR ===== */
+      .navbar {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 15px 5%;
+        background-color: white;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      }
+
+      .navbar img {
+        width: 28px;
+        cursor: pointer;
+      }
+
+      /* ===== HEADER SECTION ===== */
+      .header {
+        background: linear-gradient(to top, #fff0f0, #f1a9a9);
+        margin-top: 60px;
+        padding: 30px 20px;
+        text-align: center;
+        border-radius: 0 0 12px 12px;
+      }
+
+      .header h3 {
+        margin: 0;
+        font-size: 18px;
+        font-weight: 500;
+      }
+
+      .header p {
+        margin: 5px 0 0;
+        font-size: 14px;
+        color: #444;
+      }
+
+      /* ===== CONTAINER ===== */
+      .container {
+        padding: 25px 8%;
+      }
+
+      .section-title {
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 15px;
+        color: #333;
+      }
+
+      /* ===== BANK ICONS ===== */
+      .bank-grid,
+      .ewallet-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 15px;
+        margin-bottom: 25px;
+      }
+
+      .bank-item,
+      .wallet-item {
+        border: 1px solid #eee;
+        border-radius: 12px;
+        padding: 15px;
+        background-color: #fff;
+        text-align: center;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+        transition: all 0.2s ease;
+        cursor: pointer;
+      }
+
+      .bank-item:hover,
+      .wallet-item:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .bank-item img,
+      .wallet-item img {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+        margin-bottom: 8px;
+      }
+
+      .bank-item span,
+      .wallet-item span {
+        display: block;
+        font-size: 13px;
+        font-weight: 500;
+      }
+
+      /* ===== LINE & LABEL ===== */
+      .divider {
+        border-top: 1px solid #ccc;
+        margin: 10px 0 20px;
+      }
+
+      .lainnya {
+        font-size: 13px;
+        font-weight: 500;
+        margin: 5px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <a href="../reservasi.html">
+      <img src="../gambar/back.jpg" alt="Kembali" />
+      </a>
+    </nav>
+
+    <!-- Header -->
+    <div class="header">
+      <h3>
+        To ensure your reservation,<br />
+        please top up as a DP.
+      </h3>
+      <p>Choose your top up method</p>
+    </div>
+
+    <!-- Bank Transfer Section -->
+    <div class="container">
+      <div class="section-title">BANK TRANSFERS</div>
+      <div class="bank-grid">
+        <a href="bca.html">
+          <div class="bank-item">
+            <img src="../gambar/bca.jpg" alt="BCA" />
+            <span>BCA</span>
+          </div>
+        </a>
+        <div class="bank-item">
+          <img src="../gambar/bri.jpg" alt="BRI" />
+          <span>BRI</span>
+        </div>
+        <div class="bank-item">
+          <img src="../gambar/singa.jpg" alt="Maybank" />
+          <span>MAYBANK</span>
+        </div>
+        <div class="bank-item">
+          <img src="../gambar/cimb.jpg" alt="CIMB" />
+          <span>CIMB</span>
+        </div>
+      </div>
+
+      <div class="lainnya">Other</div>
+      <div class="divider"></div>
+
+      <!-- E-Wallet Section -->
+      <div class="section-title">E WALLET</div>
+      <div class="ewallet-grid">
+        <a href="dana.html">
+          <div class="wallet-item">
+            <img src="../gambar/dana.jpg" alt="DANA" />
+            <span>DANA</span>
+          </div>
+        </a>
+        <div class="wallet-item">
+          <img src="../gambar/shopee.jpg" alt="ShopeePay" />
+          <span>ShopeePay</span>
+        </div>
+        <div class="wallet-item">
+          <img src="../gambar/gopay.jpg" alt="GoPay" />
+          <span>GoPay</span>
+        </div>
+        <div class="wallet-item">
+          <img src="../gambar/ovo.jpg" alt="OVO" />
+          <span>OVO</span>
+        </div>
+        <div class="wallet-item">
+          <img src="../gambar/i saku.jpg" alt="i.Saku" />
+          <span>i.Saku</span>
+        </div>
+        <div class="wallet-item">
+          <img src="../gambar/link aja.jpg" alt="LinkAja" />
+          <span>LinkAja</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
